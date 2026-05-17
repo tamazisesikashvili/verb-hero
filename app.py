@@ -57,12 +57,8 @@ def is_unlocked(level_number):
 
 # --- Routes ---
 
-@app.route("/")
 def home():
-    """Home page."""
-    unlocked = get_unlocked_levels()
-    completed = session.get("completed_levels", [])
-    return render_template("index.html", levels=LEVELS, unlocked=unlocked, completed=completed)
+    return redirect("https://lingua-hero.onrender.com")
 
 
 # ---- STUDY MODE ----
