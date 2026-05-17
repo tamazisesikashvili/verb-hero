@@ -57,6 +57,7 @@ def is_unlocked(level_number):
 
 # --- Routes ---
 
+@app.route("/")
 def home():
     return redirect("https://lingua-hero.onrender.com")
 
