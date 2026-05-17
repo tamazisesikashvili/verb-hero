@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Level {{ level.level }} – {{ level.title }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Level {{ level.level }}: {{ level.title }}</h1>
+    <p>Study these {{ level.verbs | length }} verbs, then test yourself!</p>
+</div>
+
+<!-- Verb Table -->
+<table class="verb-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Base Form</th>
+            <th>Past Simple</th>
+            <th>Past Participle</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for verb in level.verbs %}
+        <tr>
+            <td class="verb-num">{{ loop.index }}</td>
+            <td class="verb-base">{{ verb.base }}</td>
+            <td>{{ verb.past }}</td>
+            <td>{{ verb.participle }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Navigation buttons -->
+<div class="study-actions">
+    {% if level.level > 1 %}
+    <a href="{{ url_for('study', level_number=level.level - 1) }}" class="btn btn-secondary">← Level {{ level.level - 1 }}</a>
+    {% endif %}
+
+    <a href="{{ url_for('game_play') }}?level={{ level.level }}" class="btn btn-primary">🎮 Play Level {{ level.level }}</a>
+
+    {% if level.level < total_levels %}
+    <a href="{{ url_for('study', level_number=level.level + 1) }}" class="btn btn-secondary">Level {{ level.level + 1 }} →</a>
+    {% endif %}
+</div>
+{% endblock %}

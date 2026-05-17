@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Results – Verb Hero{% endblock %}
+
+{% block content %}
+<div class="result-page">
+
+    <!-- Score display -->
+    <div class="final-score">
+        {% set percent = (score / total * 100) | int %}
+
+        {% if percent == 100 %}
+            <div class="trophy">🏆</div>
+            <h1>Perfect Score!</h1>
+        {% elif percent >= 70 %}
+            <div class="trophy">⭐</div>
+            <h1>Great Job!</h1>
+        {% elif percent >= 50 %}
+            <div class="trophy">👍</div>
+            <h1>Good Try!</h1>
+        {% else %}
+            <div class="trophy">💪</div>
+            <h1>Keep Practising!</h1>
+        {% endif %}
+
+        <p class="score-number">{{ score }} / {{ total }}</p>
+        <p class="score-percent">{{ percent }}%</p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="result-actions">
+        <a href="{{ url_for('game_play') }}?level={{ level }}" class="btn btn-primary">🔄 Play Again</a>
+        <a href="{{ url_for('game_home') }}" class="btn btn-secondary">Choose Level</a>
+        <a href="{{ url_for('home') }}" class="btn btn-secondary">🏠 Home</a>
+    </div>
+</div>
+{% endblock %}

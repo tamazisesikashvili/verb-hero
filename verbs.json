@@ -1,0 +1,324 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "title": "The Basics",
+      "verbs": [
+        {"base": "be",    "past": "was/were", "participle": "been"},
+        {"base": "have",  "past": "had",      "participle": "had"},
+        {"base": "do",    "past": "did",      "participle": "done"},
+        {"base": "go",    "past": "went",     "participle": "gone"},
+        {"base": "say",   "past": "said",     "participle": "said"},
+        {"base": "get",   "past": "got",      "participle": "got"},
+        {"base": "make",  "past": "made",     "participle": "made"},
+        {"base": "know",  "past": "knew",     "participle": "known"},
+        {"base": "think", "past": "thought",  "participle": "thought"},
+        {"base": "come",  "past": "came",     "participle": "come"}
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Everyday Actions",
+      "verbs": [
+        {"base": "see",   "past": "saw",      "participle": "seen"},
+        {"base": "take",  "past": "took",     "participle": "taken"},
+        {"base": "give",  "past": "gave",     "participle": "given"},
+        {"base": "find",  "past": "found",    "participle": "found"},
+        {"base": "tell",  "past": "told",     "participle": "told"},
+        {"base": "feel",  "past": "felt",     "participle": "felt"},
+        {"base": "leave", "past": "left",     "participle": "left"},
+        {"base": "put",   "past": "put",      "participle": "put"},
+        {"base": "bring", "past": "brought",  "participle": "brought"},
+        {"base": "begin", "past": "began",    "participle": "begun"}
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Getting Trickier",
+      "verbs": [
+        {"base": "keep",  "past": "kept",     "participle": "kept"},
+        {"base": "hold",  "past": "held",     "participle": "held"},
+        {"base": "write", "past": "wrote",    "participle": "written"},
+        {"base": "stand", "past": "stood",    "participle": "stood"},
+        {"base": "hear",  "past": "heard",    "participle": "heard"},
+        {"base": "let",   "past": "let",      "participle": "let"},
+        {"base": "mean",  "past": "meant",    "participle": "meant"},
+        {"base": "set",   "past": "set",      "participle": "set"},
+        {"base": "read",  "past": "read",     "participle": "read"},
+        {"base": "run",   "past": "ran",      "participle": "run"}
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Level Up",
+      "verbs": [
+        {"base": "buy",    "past": "bought",  "participle": "bought"},
+        {"base": "break",  "past": "broke",   "participle": "broken"},
+        {"base": "eat",    "past": "ate",     "participle": "eaten"},
+        {"base": "fall",   "past": "fell",    "participle": "fallen"},
+        {"base": "forget", "past": "forgot",  "participle": "forgotten"},
+        {"base": "grow",   "past": "grew",    "participle": "grown"},
+        {"base": "lose",   "past": "lost",    "participle": "lost"},
+        {"base": "meet",   "past": "met",     "participle": "met"},
+        {"base": "pay",    "past": "paid",    "participle": "paid"},
+        {"base": "send",   "past": "sent",    "participle": "sent"}
+      ]
+    },
+    {
+      "level": 5,
+      "title": "Verb Master",
+      "verbs": [
+        {"base": "sing",   "past": "sang",    "participle": "sung"},
+        {"base": "drink",  "past": "drank",   "participle": "drunk"},
+        {"base": "drive",  "past": "drove",   "participle": "driven"},
+        {"base": "fly",    "past": "flew",    "participle": "flown"},
+        {"base": "hide",   "past": "hid",     "participle": "hidden"},
+        {"base": "ride",   "past": "rode",    "participle": "ridden"},
+        {"base": "ring",   "past": "rang",    "participle": "rung"},
+        {"base": "swim",   "past": "swam",    "participle": "swum"},
+        {"base": "throw",  "past": "threw",   "participle": "thrown"},
+        {"base": "wake",   "past": "woke",    "participle": "woken"}
+      ]
+    },
+    {
+      "level": 6,
+      "title": "On the Move",
+      "verbs": [
+        {"base": "walk",   "past": "walked",  "participle": "walked"},
+        {"base": "catch",  "past": "caught",  "participle": "caught"},
+        {"base": "teach",  "past": "taught",  "participle": "taught"},
+        {"base": "sell",   "past": "sold",    "participle": "sold"},
+        {"base": "spend",  "past": "spent",   "participle": "spent"},
+        {"base": "build",  "past": "built",   "participle": "built"},
+        {"base": "sleep",  "past": "slept",   "participle": "slept"},
+        {"base": "speak",  "past": "spoke",   "participle": "spoken"},
+        {"base": "choose", "past": "chose",   "participle": "chosen"},
+        {"base": "steal",  "past": "stole",   "participle": "stolen"}
+      ]
+    },
+    {
+      "level": 7,
+      "title": "Body & Senses",
+      "verbs": [
+        {"base": "bite",   "past": "bit",     "participle": "bitten"},
+        {"base": "blow",   "past": "blew",    "participle": "blown"},
+        {"base": "draw",   "past": "drew",    "participle": "drawn"},
+        {"base": "shake",  "past": "shook",   "participle": "shaken"},
+        {"base": "smell",  "past": "smelt",   "participle": "smelt"},
+        {"base": "sweep",  "past": "swept",   "participle": "swept"},
+        {"base": "swear",  "past": "swore",   "participle": "sworn"},
+        {"base": "tear",   "past": "tore",    "participle": "torn"},
+        {"base": "wear",   "past": "wore",    "participle": "worn"},
+        {"base": "weep",   "past": "wept",    "participle": "wept"}
+      ]
+    },
+    {
+      "level": 8,
+      "title": "Thinking & Feeling",
+      "verbs": [
+        {"base": "understand", "past": "understood", "participle": "understood"},
+        {"base": "believe",    "past": "believed",   "participle": "believed"},
+        {"base": "forget",     "past": "forgot",     "participle": "forgotten"},
+        {"base": "forgive",    "past": "forgave",    "participle": "forgiven"},
+        {"base": "forbid",     "past": "forbade",    "participle": "forbidden"},
+        {"base": "lie",        "past": "lay",        "participle": "lain"},
+        {"base": "lay",        "past": "laid",       "participle": "laid"},
+        {"base": "dream",      "past": "dreamt",     "participle": "dreamt"},
+        {"base": "learn",      "past": "learnt",     "participle": "learnt"},
+        {"base": "arise",      "past": "arose",      "participle": "arisen"}
+      ]
+    },
+    {
+      "level": 9,
+      "title": "Work & Make",
+      "verbs": [
+        {"base": "beat",    "past": "beat",    "participle": "beaten"},
+        {"base": "bend",    "past": "bent",    "participle": "bent"},
+        {"base": "bind",    "past": "bound",   "participle": "bound"},
+        {"base": "burn",    "past": "burnt",   "participle": "burnt"},
+        {"base": "cast",    "past": "cast",    "participle": "cast"},
+        {"base": "cost",    "past": "cost",    "participle": "cost"},
+        {"base": "cut",     "past": "cut",     "participle": "cut"},
+        {"base": "deal",    "past": "dealt",   "participle": "dealt"},
+        {"base": "dig",     "past": "dug",     "participle": "dug"},
+        {"base": "fight",   "past": "fought",  "participle": "fought"}
+      ]
+    },
+    {
+      "level": 10,
+      "title": "Water & Nature",
+      "verbs": [
+        {"base": "freeze",  "past": "froze",   "participle": "frozen"},
+        {"base": "flow",    "past": "flowed",  "participle": "flowed"},
+        {"base": "burst",   "past": "burst",   "participle": "burst"},
+        {"base": "shine",   "past": "shone",   "participle": "shone"},
+        {"base": "shrink",  "past": "shrank",  "participle": "shrunk"},
+        {"base": "sink",    "past": "sank",    "participle": "sunk"},
+        {"base": "slide",   "past": "slid",    "participle": "slid"},
+        {"base": "spin",    "past": "spun",    "participle": "spun"},
+        {"base": "spring",  "past": "sprang",  "participle": "sprung"},
+        {"base": "strike",  "past": "struck",  "participle": "struck"}
+      ]
+    },
+    {
+      "level": 11,
+      "title": "Communication",
+      "verbs": [
+        {"base": "speak",   "past": "spoke",   "participle": "spoken"},
+        {"base": "spell",   "past": "spelt",   "participle": "spelt"},
+        {"base": "spread",  "past": "spread",  "participle": "spread"},
+        {"base": "swear",   "past": "swore",   "participle": "sworn"},
+        {"base": "shout",   "past": "shouted", "participle": "shouted"},
+        {"base": "shoot",   "past": "shot",    "participle": "shot"},
+        {"base": "show",    "past": "showed",  "participle": "shown"},
+        {"base": "shut",    "past": "shut",    "participle": "shut"},
+        {"base": "sit",     "past": "sat",     "participle": "sat"},
+        {"base": "split",   "past": "split",   "participle": "split"}
+      ]
+    },
+    {
+      "level": 12,
+      "title": "Home & Daily Life",
+      "verbs": [
+        {"base": "feed",    "past": "fed",     "participle": "fed"},
+        {"base": "hang",    "past": "hung",    "participle": "hung"},
+        {"base": "hit",     "past": "hit",     "participle": "hit"},
+        {"base": "hurt",    "past": "hurt",    "participle": "hurt"},
+        {"base": "kneel",   "past": "knelt",   "participle": "knelt"},
+        {"base": "knit",    "past": "knit",    "participle": "knit"},
+        {"base": "leap",    "past": "leapt",   "participle": "leapt"},
+        {"base": "lend",    "past": "lent",    "participle": "lent"},
+        {"base": "light",   "past": "lit",     "participle": "lit"},
+        {"base": "load",    "past": "loaded",  "participle": "loaded"}
+      ]
+    },
+    {
+      "level": 13,
+      "title": "Travel & Adventure",
+      "verbs": [
+        {"base": "creep",   "past": "crept",   "participle": "crept"},
+        {"base": "flee",    "past": "fled",    "participle": "fled"},
+        {"base": "fling",   "past": "flung",   "participle": "flung"},
+        {"base": "grind",   "past": "ground",  "participle": "ground"},
+        {"base": "lead",    "past": "led",     "participle": "led"},
+        {"base": "overtake","past": "overtook","participle": "overtaken"},
+        {"base": "seek",    "past": "sought",  "participle": "sought"},
+        {"base": "speed",   "past": "sped",    "participle": "sped"},
+        {"base": "stick",   "past": "stuck",   "participle": "stuck"},
+        {"base": "sting",   "past": "stung",   "participle": "stung"}
+      ]
+    },
+    {
+      "level": 14,
+      "title": "Power Words",
+      "verbs": [
+        {"base": "stink",   "past": "stank",   "participle": "stunk"},
+        {"base": "stride",  "past": "strode",  "participle": "stridden"},
+        {"base": "string",  "past": "strung",  "participle": "strung"},
+        {"base": "strive",  "past": "strove",  "participle": "striven"},
+        {"base": "swoop",   "past": "swooped", "participle": "swooped"},
+        {"base": "swing",   "past": "swung",   "participle": "swung"},
+        {"base": "thrust",  "past": "thrust",  "participle": "thrust"},
+        {"base": "tread",   "past": "trod",    "participle": "trodden"},
+        {"base": "undergo", "past": "underwent","participle": "undergone"},
+        {"base": "upset",   "past": "upset",   "participle": "upset"}
+      ]
+    },
+    {
+      "level": 15,
+      "title": "Compound Verbs",
+      "verbs": [
+        {"base": "become",  "past": "became",  "participle": "become"},
+        {"base": "overcome","past": "overcame","participle": "overcome"},
+        {"base": "undergo", "past": "underwent","participle": "undergone"},
+        {"base": "undertake","past": "undertook","participle": "undertaken"},
+        {"base": "withdraw","past": "withdrew","participle": "withdrawn"},
+        {"base": "withstand","past": "withstood","participle": "withstood"},
+        {"base": "forsake", "past": "forsook", "participle": "forsaken"},
+        {"base": "mistake", "past": "mistook", "participle": "mistaken"},
+        {"base": "partake", "past": "partook", "participle": "partaken"},
+        {"base": "retake",  "past": "retook",  "participle": "retaken"}
+      ]
+    },
+    {
+      "level": 16,
+      "title": "Rarely Used",
+      "verbs": [
+        {"base": "abide",   "past": "abode",   "participle": "abode"},
+        {"base": "befall",  "past": "befell",  "participle": "befallen"},
+        {"base": "behold",  "past": "beheld",  "participle": "beheld"},
+        {"base": "bereave", "past": "bereft",  "participle": "bereft"},
+        {"base": "beseech", "past": "besought","participle": "besought"},
+        {"base": "bestride","past": "bestrode","participle": "bestridden"},
+        {"base": "chide",   "past": "chid",    "participle": "chidden"},
+        {"base": "cleave",  "past": "clove",   "participle": "cloven"},
+        {"base": "clothe",  "past": "clad",    "participle": "clad"},
+        {"base": "crow",    "past": "crew",    "participle": "crowed"}
+      ]
+    },
+    {
+      "level": 17,
+      "title": "Old English",
+      "verbs": [
+        {"base": "dare",    "past": "durst",   "participle": "dared"},
+        {"base": "dwell",   "past": "dwelt",   "participle": "dwelt"},
+        {"base": "gird",    "past": "girt",    "participle": "girt"},
+        {"base": "grave",   "past": "graved",  "participle": "graven"},
+        {"base": "heave",   "past": "hove",    "participle": "hoven"},
+        {"base": "hew",     "past": "hewed",   "participle": "hewn"},
+        {"base": "mow",     "past": "mowed",   "participle": "mown"},
+        {"base": "pen",     "past": "pent",    "participle": "pent"},
+        {"base": "plead",   "past": "pled",    "participle": "pled"},
+        {"base": "prove",   "past": "proved",  "participle": "proven"}
+      ]
+    },
+    {
+      "level": 18,
+      "title": "Literature & Art",
+      "verbs": [
+        {"base": "sew",     "past": "sewed",   "participle": "sewn"},
+        {"base": "sow",     "past": "sowed",   "participle": "sown"},
+        {"base": "slay",    "past": "slew",    "participle": "slain"},
+        {"base": "smite",   "past": "smote",   "participle": "smitten"},
+        {"base": "strew",   "past": "strewed", "participle": "strewn"},
+        {"base": "stride",  "past": "strode",  "participle": "stridden"},
+        {"base": "thrive",  "past": "throve",  "participle": "thriven"},
+        {"base": "weave",   "past": "wove",    "participle": "woven"},
+        {"base": "wed",     "past": "wed",     "participle": "wed"},
+        {"base": "wring",   "past": "wrung",   "participle": "wrung"}
+      ]
+    },
+    {
+      "level": 19,
+      "title": "Expert Level",
+      "verbs": [
+        {"base": "bid",     "past": "bade",    "participle": "bidden"},
+        {"base": "bide",    "past": "bode",    "participle": "bided"},
+        {"base": "broadcast","past": "broadcast","participle": "broadcast"},
+        {"base": "burst",   "past": "burst",   "participle": "burst"},
+        {"base": "forecast","past": "forecast","participle": "forecast"},
+        {"base": "input",   "past": "input",   "participle": "input"},
+        {"base": "offset",  "past": "offset",  "participle": "offset"},
+        {"base": "output",  "past": "output",  "participle": "output"},
+        {"base": "preset",  "past": "preset",  "participle": "preset"},
+        {"base": "rid",     "past": "rid",     "participle": "rid"}
+      ]
+    },
+    {
+      "level": 20,
+      "title": "Verb Legend",
+      "verbs": [
+        {"base": "rewrite", "past": "rewrote", "participle": "rewritten"},
+        {"base": "rebuild", "past": "rebuilt", "participle": "rebuilt"},
+        {"base": "redo",    "past": "redid",   "participle": "redone"},
+        {"base": "retell",  "past": "retold",  "participle": "retold"},
+        {"base": "rethink", "past": "rethought","participle": "rethought"},
+        {"base": "remake",  "past": "remade",  "participle": "remade"},
+        {"base": "resell",  "past": "resold",  "participle": "resold"},
+        {"base": "resend",  "past": "resent",  "participle": "resent"},
+        {"base": "rerun",   "past": "reran",   "participle": "rerun"},
+        {"base": "reread",  "past": "reread",  "participle": "reread"}
+      ]
+    }
+  ]
+}

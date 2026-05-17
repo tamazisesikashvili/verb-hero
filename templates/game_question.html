@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Question {{ index }}/{{ total }} – Verb Hero{% endblock %}
+
+{% block content %}
+
+<!-- Progress bar -->
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: {{ (index / total * 100) | int }}%"></div>
+</div>
+<div class="progress-text">Question {{ index }} of {{ total }} &nbsp;|&nbsp; Score: {{ score }}</div>
+
+<!-- Question card -->
+<div class="question-card">
+    <p class="question-label">What are the 3 forms of:</p>
+    <h1 class="verb-display">{{ verb.base }}</h1>
+
+    {% if result is none %}
+    <!-- SHOW THE FORM (before answering) -->
+    <form method="POST" action="{{ url_for('game_question') }}" class="answer-form">
+        <div class="input-group">
+            <label for="past">Past Simple:</label>
+            <input type="text" id="past" name="past" placeholder="e.g. went" autofocus autocomplete="off">
+        </div>
+        <div class="input-group">
+            <label for="participle">Past Participle:</label>
+            <input type="text" id="participle" name="participle" placeholder="e.g. gone" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary btn-big">Check ✓</button>
+    </form>
+
+    {% else %}
+    <!-- SHOW THE RESULT (after answering) -->
+    <div class="result-box {{ result }}">
+        {% if result == "correct" %}
+            <p class="result-icon">✅ Correct!</p>
+        {% else %}
+            <p class="result-icon">❌ Not quite!</p>
+            <p class="correct-answer">
+                The right answer: <strong>{{ verb.base }}</strong> → <strong>{{ verb.past }}</strong> → <strong>{{ verb.participle }}</strong>
+            </p>
+            <p class="your-answer">
+                Your answer: {{ past_answer }} / {{ participle_answer }}
+            </p>
+        {% endif %}
+    </div>
+
+    {% if index < total %}
+        <a href="{{ url_for('game_question') }}" class="btn btn-primary btn-big">Next →</a>
+    {% else %}
+        <a href="{{ url_for('game_result') }}" class="btn btn-primary btn-big">See Results 🏆</a>
+    {% endif %}
+    {% endif %}
+</div>
+
+{% endblock %}
