@@ -10,15 +10,25 @@
 </div>
 
 <h2 class="section-title">📚 Study Mode</h2>
-<p class="section-desc">Choose a level to study all 10 verbs before playing.</p>
+<p class="section-desc">Complete each level's game with 70%+ to unlock the next one!</p>
 
 <div class="level-grid">
     {% for level in levels %}
-    <a href="{{ url_for('study', level_number=level.level) }}" class="level-card">
-        <div class="level-number">Level {{ level.level }}</div>
-        <div class="level-title">{{ level.title }}</div>
-        <div class="level-count">{{ level.verbs | length }} verbs</div>
-    </a>
+        {% if level.level in unlocked %}
+            <a href="{{ url_for('study', level_number=level.level) }}" class="level-card {% if level.level in completed %}level-done{% endif %}">
+                <div class="level-number">
+                    {% if level.level in completed %}✅{% else %}Level {{ level.level }}{% endif %}
+                </div>
+                <div class="level-title">{{ level.title }}</div>
+                <div class="level-count">{{ level.verbs | length }} verbs</div>
+            </a>
+        {% else %}
+            <div class="level-card level-locked">
+                <div class="level-number">🔒</div>
+                <div class="level-title">Level {{ level.level }}</div>
+                <div class="level-count">Complete level {{ level.level - 1 }} first</div>
+            </div>
+        {% endif %}
     {% endfor %}
 </div>
 {% endblock %}

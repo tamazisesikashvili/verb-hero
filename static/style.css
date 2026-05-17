@@ -380,6 +380,50 @@ main {
     flex-wrap: wrap;
 }
 
+/* ===== LOCKED / UNLOCKED LEVELS ===== */
+.level-locked {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+
+.level-locked .level-number {
+    color: #aaa;
+}
+
+.level-done {
+    border-color: #34d399;
+    background: #ecfdf5;
+}
+
+.level-done .level-number {
+    color: #059669;
+}
+
+/* ===== UNLOCK / LOCKED BANNERS ===== */
+.unlock-banner {
+    background: #ecfdf5;
+    border: 2px solid #34d399;
+    border-radius: 14px;
+    padding: 16px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #059669;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.locked-banner {
+    background: #fff7ed;
+    border: 2px solid #f59e0b;
+    border-radius: 14px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    color: #d97706;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
 /* ===== MISC ===== */
 .back-link {
     margin-top: 20px;
