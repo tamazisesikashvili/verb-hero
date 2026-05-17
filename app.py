@@ -15,10 +15,13 @@ def load_verbs():
 
 LEVELS = load_verbs()  # Load once when the app starts
 
+# Minimum score percentage needed to unlock the next level
+PASS_PERCENT = 70
+
 
 # --- Helper Functions ---
 def get_level(level_number):
-    """Return a single level by its number (1-5)."""
+    """Return a single level by its number."""
     for level in LEVELS:
         if level["level"] == level_number:
             return level
@@ -31,13 +34,35 @@ def all_verbs():
         verbs.extend(level["verbs"])
     return verbs
 
+def get_unlocked_levels():
+    """Return a list of level numbers the player has unlocked.
+    Level 1 is always unlocked. Each other level unlocks when
+    the previous level is completed with 70% or more."""
+    if "completed_levels" not in session:
+        session["completed_levels"] = []
+
+    unlocked = [1]  # Level 1 always unlocked
+
+    for completed in session["completed_levels"]:
+        next_level = completed + 1
+        if next_level not in unlocked:
+            unlocked.append(next_level)
+
+    return unlocked
+
+def is_unlocked(level_number):
+    """Check if a specific level is unlocked."""
+    return level_number in get_unlocked_levels()
+
 
 # --- Routes ---
 
 @app.route("/")
 def home():
     """Home page."""
-    return render_template("index.html", levels=LEVELS)
+    unlocked = get_unlocked_levels()
+    completed = session.get("completed_levels", [])
+    return render_template("index.html", levels=LEVELS, unlocked=unlocked, completed=completed)
 
 
 # ---- STUDY MODE ----
@@ -45,6 +70,9 @@ def home():
 @app.route("/study/<int:level_number>")
 def study(level_number):
     """Show all 10 verbs for a given level."""
+    if not is_unlocked(level_number):
+        return redirect(url_for("home"))  # Block locked levels
+
     level = get_level(level_number)
     if level is None:
         return "Level not found!", 404
@@ -62,9 +90,8 @@ def game_home():
 @app.route("/game/play")
 def game_play():
     """Start a new game session."""
-    level_number = request.args.get("level", "all")  # Get level from URL, e.g. ?level=2
+    level_number = request.args.get("level", "all")
 
-    # Build the list of verbs for this game
     if level_number == "all":
         verbs = all_verbs()
     else:
@@ -73,10 +100,8 @@ def game_play():
             return redirect(url_for("game_home"))
         verbs = level["verbs"]
 
-    # Shuffle so it's different every time
     random.shuffle(verbs)
 
-    # Save game state in the session (session = data stored per browser tab)
     session["game_verbs"] = verbs
     session["game_index"] = 0
     session["game_score"] = 0
@@ -89,8 +114,6 @@ def game_play():
 @app.route("/game/question", methods=["GET", "POST"])
 def game_question():
     """Show the current question, or handle the submitted answer."""
-
-    # Check that a game is actually running
     if "game_verbs" not in session:
         return redirect(url_for("game_home"))
 
@@ -98,19 +121,13 @@ def game_question():
     verbs = session["game_verbs"]
     total = session["game_total"]
 
-    # Game over — all questions answered
     if index >= total:
         return redirect(url_for("game_result"))
 
     current_verb = verbs[index]
-
-    # Decide which form to hide (randomly show base or past, user fills in the rest)
-    # For simplicity: always show the BASE form, user types past + participle
-    
-    result = None  # Will hold "correct" or "wrong" after checking
+    result = None
 
     if request.method == "POST":
-        # Player submitted an answer
         past_answer = request.form.get("past", "").strip().lower()
         participle_answer = request.form.get("participle", "").strip().lower()
 
@@ -123,9 +140,8 @@ def game_question():
         else:
             result = "wrong"
 
-        # Move to the next verb
         session["game_index"] = index + 1
-        session.modified = True  # Tell Flask the session changed
+        session.modified = True
 
         return render_template(
             "game_question.html",
@@ -138,7 +154,6 @@ def game_question():
             score=session["game_score"],
         )
 
-    # GET request — show a fresh question
     return render_template(
         "game_question.html",
         verb=current_verb,
@@ -158,17 +173,30 @@ def game_result():
     score = session["game_score"]
     total = session["game_total"]
     level = session["game_level"]
+    percent = int(score / total * 100)
 
-    # Clear the game from the session
+    # If passed 70%+, unlock the next level
+    level_unlocked = False
+    if level != "all":
+        level_num = int(level)
+        if percent >= PASS_PERCENT:
+            if "completed_levels" not in session:
+                session["completed_levels"] = []
+            if level_num not in session["completed_levels"]:
+                session["completed_levels"].append(level_num)
+                session.modified = True
+                level_unlocked = True
+
     session.pop("game_verbs", None)
     session.pop("game_index", None)
     session.pop("game_score", None)
     session.pop("game_total", None)
     session.pop("game_level", None)
 
-    return render_template("game_result.html", score=score, total=total, level=level)
+    return render_template("game_result.html", score=score, total=total,
+                           level=level, percent=percent, level_unlocked=level_unlocked)
 
 
 # --- Run the App ---
 if __name__ == "__main__":
-    app.run(debug=True)  # debug=True means it auto-reloads when you save changes
+    app.run(debug=True)
